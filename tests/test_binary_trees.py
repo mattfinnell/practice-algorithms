@@ -62,3 +62,18 @@ def test_inorder_traversal_on_imbalanced_tree(tree_imbalanced : BinarySearchTree
 
 def test_postorder_traversal_on_imbalanced_tree(tree_imbalanced : BinarySearchTree):
     assert tree_imbalanced.postorder() == [1, 3, 2, 4, 5, 7, 6]
+
+def test_search_for_item_in_empty_tree(tree_empty : BinarySearchTree):
+    assert not tree_empty.search(5)
+
+def test_search_for_existing_item_in_balanced_tree(tree_balanced : BinarySearchTree):
+    assert tree_balanced.search(5)
+
+def test_search_for_existing_item_in_imbalanced_tree(tree_imbalanced : BinarySearchTree):
+    assert tree_imbalanced.search(5)
+
+def test_search_for_non_existing_item_in_balanced_tree(tree_balanced : BinarySearchTree):
+    assert not tree_balanced.search(20)
+
+def test_search_for_non_existing_item_in_imbalanced_tree(tree_imbalanced : BinarySearchTree):
+    assert not tree_imbalanced.search(20)
