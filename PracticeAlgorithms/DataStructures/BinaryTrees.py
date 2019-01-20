@@ -5,7 +5,6 @@ class BinaryTreeNode(object):
         self.Right = None
 
 class BinarySearchTree(object):
-
     def __init__(self):
         self._root = None
     
@@ -90,3 +89,21 @@ class BinarySearchTree(object):
                 self._insert(node.Right, data)
             else:
                 node.Right = BinaryTreeNode(data)
+    
+    def search(self, key):
+        if not self._root:
+            return False
+        
+        return self._search(self._root, key)
+
+    def _search(self, node, key):
+        if key == node.Data:
+            return True
+
+        if key < node.Data and node.Left:
+            return self._search(node.Left, key)
+
+        if key > node.Data and node.Right:
+            return self._search(node.Right, key)
+        
+        return False
