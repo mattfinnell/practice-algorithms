@@ -1,6 +1,7 @@
 {
-    "pythonTestExplorer.testFramework": "pytest",
-    "python.unitTest.pyTestEnabled": true,
     "python.pythonPath": "/Users/mattfinnell/.local/share/virtualenvs/PracticeAlgorithms-FNjl4XDJ/bin/python",
-    "python.linting.pylintEnabled": true
+    "python.linting.pylintEnabled": true,
+    "python.unitTest.unittestEnabled": false,
+    "python.unitTest.pyTestEnabled": true,
+    "python.unitTest.nosetestsEnabled": false,
 }
