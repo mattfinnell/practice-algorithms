@@ -1,4 +1,5 @@
 from collections import deque
+from .Utilities import neighbors
 
 class Solution:
     def numIslands(self, grid):
@@ -22,9 +23,7 @@ class Solution:
 def depth_first_search(i, j, grid, m, n, visited):
     visited[(i, j)] = True
     
-    neighbors = list(get_neighbors(i, j, m, n))
-
-    for a, b in neighbors:
+    for a, b in neighbors(i, j, m, n):
         if not visited[(a, b)] and grid[a][b] == '1':
             depth_first_search(a, b, grid, m, n, visited)
 
@@ -34,20 +33,7 @@ def breadth_first_search(i, j, grid, m, n, visited):
     while queue:
         _a, _b = queue.popleft()
 
-        for a, b in get_neighbors(_a, _b, m, n):
+        for a, b in neighbors(_a, _b, m, n):
             if not visited[(a, b)] and grid[a][b] == '1':
                 visited[(a, b)] = True
                 queue.append((a, b))
-
-def get_neighbors(i, j, m, n):
-    if i > 0: # has a neighbor above
-        yield (i - 1, j)
-
-    if j > 0: # has a neighbord to the left
-        yield (i , j - 1)
-
-    if i < (m - 1): # has a neighbor below
-        yield (i + 1, j)
-
-    if j < (n - 1): # has a neighbor to the right
-        yield (i, j + 1)
