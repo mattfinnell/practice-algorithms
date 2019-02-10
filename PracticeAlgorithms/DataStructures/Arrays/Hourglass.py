@@ -1,4 +1,4 @@
-from PracticeAlgorithms.HackerRankQuestions.Constants import HOURGLASS_SIZE, HOURGLASS_FILTER
+from PracticeAlgorithms.Constants import HOURGLASS_SIZE, HOURGLASS_FILTER
 
 def apply_hourglass_filter(arr, i, j):
     hourglass = []
