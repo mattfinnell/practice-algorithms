@@ -1,21 +1,21 @@
-from PracticeAlgorithms.LeetCodeQuestions.DynamicProgramming import max_subarray_skip_sum
+from PracticeAlgorithms.DynamicProgramming.MaxSkipSum import max_skip_sum
 
 import pytest
 
 def test_on_sample_1(sample_1):
-    assert max_subarray_skip_sum(sample_1) == 12
+    assert max_skip_sum(sample_1) == 12
 
 def test_on_sample_2(sample_2):
-    assert max_subarray_skip_sum(sample_2) == 4
+    assert max_skip_sum(sample_2) == 4
 
 def test_on_sample_3(sample_3):
-    assert max_subarray_skip_sum(sample_3) == 4
+    assert max_skip_sum(sample_3) == 4
 
 def test_on_sample_4(sample_4):
-    assert max_subarray_skip_sum(sample_4) == 14
+    assert max_skip_sum(sample_4) == 14
 
 def test_on_empty_list(sample_4):
-    assert max_subarray_skip_sum([]) == 0
+    assert max_skip_sum([]) == 0
 
 @pytest.fixture
 def sample_1():

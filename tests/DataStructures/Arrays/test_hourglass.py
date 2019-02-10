@@ -1,4 +1,4 @@
-from PracticeAlgorithms.HackerRankQuestions.Hourglass import (
+from PracticeAlgorithms.DataStructures.Arrays.Hourglass import (
     apply_hourglass_filter, 
     calculate_hourglass_sum,
     hourglass_max_sum

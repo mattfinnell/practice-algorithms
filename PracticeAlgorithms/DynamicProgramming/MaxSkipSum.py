@@ -1,4 +1,4 @@
-def max_subarray_skip_sum(Arr):
+def max_skip_sum(Arr):
     return recursive_memoized(Arr)
 
 def recursive(Arr):

@@ -1,4 +1,4 @@
-from PracticeAlgorithms.HackerRankQuestions.StepsOfDavid import step_perms
+from PracticeAlgorithms.DynamicProgramming.StepsOfDavid import step_perms
 
 import pytest
 
